@@ -13,7 +13,7 @@ struct HashMap {
     Pair ** buckets;
     long size; //cantidad de datos/pairs en la tabla
     long capacity; //capacidad de la tabla
-    long current; //indice del ultimo dato accedido
+    long current; //index del ultimo dato accedido
 };
 
 Pair * createPair( char * key,  void * value) {
@@ -40,18 +40,17 @@ int is_equal(void* key1, void* key2){
 
 
 void insertMap(HashMap * map, char * key, void * value) {
-    long indice = hash(key, map->capacity);
-    while(map->buckets[indice] !=NULL && map->buckets[indice]->key !=NULL){
-        if (is_equal(map->buckets[indice]->key, key) == 1) return;
-        indice = (indice + 1) % map->capacity;
+    long index = hash(key, map->capacity);
+    while(map->buckets[index] !=NULL && map->buckets[index]->key !=NULL){
+        if (is_equal(map->buckets[index]->key, key) == 1) return;
+        index = (index + 1) % map->capacity;
     }
-    
-    if (map->buckets[indice] = NULL){
-        map->buckets[indice]->key = key;
-        map->buckets[indice]->value = value;
-    }
-    else{
-        map->buckets[indice] = createPair(key, value);
+
+    if (map->buckets[index] != NULL){
+        map->buckets[index]->key = key;
+        map->buckets[index]->value = value;
+    }else{
+        map->buckets[index] = createPair(key, value);
     }
     map->size++;
     if ((double) map->size/(double) map->capacity > 0.75){ enlarge(map);} 
@@ -76,7 +75,19 @@ void eraseMap(HashMap * map,  char * key) {
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
+    
+    long search_key = hash(key, map->capacity);
+    long capacidad = hash(key, map->capacity);
+    //Todo dudoso
+    while(map->buckets[search_key] !=NULL && map->buckets[search_key]->key !=NULL){
+        if (map->buckets[search_key] == NULL || (search_key -1) ==capacidad)return NULL;
 
+        /*if (is_equal(map->buckets[search_key]->key, key) == 1) {
+            map->current = map->buckets[search_key];
+            //return;
+        }*/
+        else {search_key = (search_key + 1) % map->capacity;}
+    }
 
     return NULL;
 }
@@ -87,6 +98,6 @@ Pair * firstMap(HashMap * map) {
 }
 
 Pair * nextMap(HashMap * map) {
-
+    
     return NULL;
 }
