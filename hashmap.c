@@ -105,7 +105,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  long search_key = hash (key, map->capacity);
+  int search_key = 0;
   while (map->buckets[search_key]->key !=NULL){
     search_key++;
   }
