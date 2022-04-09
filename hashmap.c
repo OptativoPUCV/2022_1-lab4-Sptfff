@@ -93,8 +93,8 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-
-  return NULL;
+  
+  return map->buckets[0];
 }
 
 Pair * nextMap(HashMap * map) {
