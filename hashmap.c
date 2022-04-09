@@ -95,8 +95,12 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  
-  return NULL;
+  if (map->capacity != 0){
+    return map->buckets[0];
+  }
+  else {
+    return NULL;
+  }
 }
 
 Pair * nextMap(HashMap * map) {
