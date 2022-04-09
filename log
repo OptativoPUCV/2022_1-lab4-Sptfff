@@ -122,3 +122,18 @@ Sat Apr  9 23:39:35 UTC 2022:
  tests:  12|2
 total_score: 50/70
 72e7bfb
+Sat Apr  9 23:44:35 UTC 2022: 
+ hashmap.c | 9 ++++-----
+ 1 file changed, 4 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:108:27: error: ‘key’ undeclared (first use in this function); did you mean ‘key_t’?
+   long search_key = hash (key, map->capacity)
+                           ^~~
+                           key_t
+hashmap.c:108:27: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:109:3: error: expected ‘,’ or ‘;’ before ‘while’
+   while (map->buckets[search_key]->key !=NULL){
+   ^~~~~
+Compilation failed
+892df48

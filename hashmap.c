@@ -105,12 +105,11 @@ Pair * searchMap(HashMap * map,  char * key) {
 }
 
 Pair * firstMap(HashMap * map) {
-  if (map->capacity != 0){
-    return map->buckets[0];
+  long search_key = hash (key, map->capacity)
+  while (map->buckets[search_key]->key !=NULL){
+    search_key++;
   }
-  else {
-    return NULL;
-  }
+  return map->buckets[search_key];
 }
 
 Pair * nextMap(HashMap * map) {
