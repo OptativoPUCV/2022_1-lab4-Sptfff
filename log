@@ -62,3 +62,35 @@ Sat Apr  9 23:10:35 UTC 2022:
  tests:  8|4
 total_score: 30/70
 967f44d
+Sat Apr  9 23:28:34 UTC 2022: 
+ hashmap.c | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:68:3: error: conversion to non-scalar type requested
+   HashMap map = (HashMap) malloc(sizeof(HashMap));
+   ^~~~~~~
+hashmap.c:69:7: error: invalid type argument of ‘->’ (have ‘HashMap {aka struct HashMap}’)
+   map -> buckets = calloc(capacity,sizeof(Pair));
+       ^~
+hashmap.c:70:7: error: invalid type argument of ‘->’ (have ‘HashMap {aka struct HashMap}’)
+   map -> buckets[0] = NULL;
+       ^~
+hashmap.c:71:7: error: invalid type argument of ‘->’ (have ‘HashMap {aka struct HashMap}’)
+   map -> size = 0;
+       ^~
+hashmap.c:72:7: error: invalid type argument of ‘->’ (have ‘HashMap {aka struct HashMap}’)
+   map -> capacity = capacity;
+       ^~
+hashmap.c:73:7: error: invalid type argument of ‘->’ (have ‘HashMap {aka struct HashMap}’)
+   map -> current = -1;
+       ^~
+hashmap.c:74:10: error: incompatible types when returning type ‘HashMap {aka struct HashMap}’ but ‘HashMap * {aka struct HashMap *}’ was expected
+   return map;
+          ^~~
+hashmap.c:75:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+aaf57b2
