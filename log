@@ -39,3 +39,14 @@ Sat Apr  9 22:58:50 UTC 2022:
  tests:  5|5
 total_score: 20/70
 4dabf16
+Sat Apr  9 23:04:21 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:82:10: error: unused variable ‘capacidad’ [-Werror=unused-variable]
+     long capacidad = hash(key, map->capacity);
+          ^~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7983f11

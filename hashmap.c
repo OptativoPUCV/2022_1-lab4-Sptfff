@@ -82,7 +82,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     long capacidad = hash(key, map->capacity);
     //Todo dudoso
     while(map->buckets[search_key] !=NULL){
-        if (map->buckets[search_key] == NULL || (search_key -1) ==capacidad)return NULL;
+        if (map->buckets[search_key] == NULL )return NULL;
 
         if (is_equal(map->buckets[search_key]->key, key) == 1) {
             map->current = search_key;
