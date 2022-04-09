@@ -79,7 +79,7 @@ void eraseMap(HashMap * map,  char * key) {
 Pair * searchMap(HashMap * map,  char * key) {   
     
     long search_key = hash(key, map->capacity);
-    long capacidad = hash(key, map->capacity);
+    //long capacidad = hash(key, map->capacity);
     //Todo dudoso
     while(map->buckets[search_key] !=NULL){
         if (map->buckets[search_key] == NULL )return NULL;

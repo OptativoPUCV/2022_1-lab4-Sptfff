@@ -50,3 +50,9 @@ hashmap.c:82:10: error: unused variable ‘capacidad’ [-Werror=unused-variable
 cc1: all warnings being treated as errors
 Compilation failed
 7983f11
+Sat Apr  9 23:04:38 UTC 2022: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|4
+total_score: 30/70
+4e2d2fe
