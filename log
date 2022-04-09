@@ -10,3 +10,14 @@ Sat Apr  9 03:57:41 UTC 2022:
  tests:  6|5
 total_score: 20/70
 e889f84
+Sat Apr  9 22:49:53 UTC 2022: 
+ hashmap.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘createMap’:
+hashmap.c:70:10: error: return from incompatible pointer type [-Werror=incompatible-pointer-types]
+   return mapa;
+          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b746bfe
