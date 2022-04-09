@@ -65,8 +65,8 @@ void enlarge(HashMap * map) {
 
 
 HashMap * createMap(long capacity) {
-
-    return NULL;
+  
+  return NULL;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
@@ -89,12 +89,12 @@ Pair * searchMap(HashMap * map,  char * key) {
         else {search_key = (search_key + 1) % map->capacity;}
     }
 
-    return NULL;
+    return map->buckets[search_key];
 }
 
 Pair * firstMap(HashMap * map) {
 
-    return NULL;
+  return NULL;
 }
 
 Pair * nextMap(HashMap * map) {
