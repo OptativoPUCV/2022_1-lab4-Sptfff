@@ -106,6 +106,9 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 Pair * firstMap(HashMap * map) {
   int search_key = 0;
+  if (map->buckets[0] != NULL){
+    return map->buckets[0];
+  }
   while (map->buckets[search_key] !=NULL){
     search_key++;
   }
