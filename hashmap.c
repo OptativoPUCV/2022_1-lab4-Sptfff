@@ -107,9 +107,7 @@ Pair *searchMap(HashMap *map, char *key) {
 }
 
 Pair *firstMap(HashMap *map) {
-	if (map->buckets[0] != NULL) {
-		return map->buckets[0];
-	}
+	
   int aux;
 	for (aux = 0; aux < map->capacity; aux++) {
 		if (map->buckets[aux] != NULL) {
