@@ -113,13 +113,13 @@ Pair * firstMap(HashMap * map) {
     if (map->buckets[i] != NULL){
       if (map->buckets[i]->key != NULL){
         map->current = i;
-        return map->buckets[i];
+        
       }
     }
     
   }
 
-  return NULL;
+  return map->buckets[map->current];
 }
 
 Pair * nextMap(HashMap * map) {
