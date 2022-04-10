@@ -110,17 +110,18 @@ Pair *firstMap(HashMap *map) {
 	if (map->buckets[0] != NULL) {
 		return map->buckets[0];
 	}
-	for (int i = 0; i < map->capacity; i++) {
-		if (map->buckets[i] != NULL) {
-			if (map->buckets[i]->key != NULL) {
-				map->current = i;
+  int aux;
+	for (aux = 0; aux < map->capacity; aux++) {
+		if (map->buckets[aux] != NULL) {
+			if (map->buckets[aux]->key != NULL) {
+				map->current = aux;
         break;
-        return map->buckets[i];
+        return map->buckets[aux];
 			}
 		}
 	}
   
-	return map->buckets[map->current];
+	return map->buckets[aux];
 }
 
 Pair *nextMap(HashMap *map) {
