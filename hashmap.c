@@ -115,7 +115,6 @@ Pair *firstMap(HashMap *map) {
 		if (map->buckets[aux] != NULL) {
 			if (map->buckets[aux]->key != NULL) {
 				map->current = aux;
-        break;
         return map->buckets[aux];
 			}
 		}
