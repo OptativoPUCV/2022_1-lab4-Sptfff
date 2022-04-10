@@ -220,3 +220,14 @@ Sun Apr 10 21:45:24 UTC 2022:
  tests:  12|2
 total_score: 50/70
 907aed9
+Sun Apr 10 22:00:48 UTC 2022: 
+ hashmap.c | 13 +++++++++++--
+ 1 file changed, 11 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:126:18: error: ‘i’ undeclared (first use in this function)
+   map->current = i;
+                  ^
+hashmap.c:126:18: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+1f7b0c5

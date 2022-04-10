@@ -61,6 +61,15 @@ void insertMap(HashMap *map, char *key, void *value) {
 
 void enlarge(HashMap *map) {
 	enlarge_called = 1; // no borrar (testing purposes)
+
+  
+
+  if (map->capacity != 0){
+    map->capacity *= 2;
+  }
+
+  //Paso C
+
 }
 
 HashMap *createMap(long capacity) {
@@ -110,11 +119,11 @@ Pair *firstMap(HashMap *map) {
 	for (int i = 0; i < map->capacity; i++) {
 		if (map->buckets[i] != NULL) {
 			if (map->buckets[i]->key != NULL) {
-				map->current = i;
+				
 			}
 		}
 	}
-
+  map->current = i;
 	return map->buckets[map->current];
 }
 
