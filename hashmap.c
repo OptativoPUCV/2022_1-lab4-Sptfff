@@ -120,7 +120,7 @@ Pair *firstMap(HashMap *map) {
 		}
 	}
   
-	return map->buckets[aux];
+	return NULL;
 }
 
 Pair *nextMap(HashMap *map) {
