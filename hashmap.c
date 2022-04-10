@@ -112,6 +112,8 @@ Pair * firstMap(HashMap * map) {
   while (map->buckets[search_key] !=NULL){
     search_key++;
   }
+
+  map->current = search_key;
   return map->buckets[search_key];
 }
 
