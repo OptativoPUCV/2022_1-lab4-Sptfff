@@ -430,3 +430,8 @@ hashmap.c:72:50: error: ‘auxBuckets’ may be used uninitialized in this funct
 cc1: all warnings being treated as errors
 Compilation failed
 bdc828a
+Mon Apr 11 02:57:57 UTC 2022: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  0|0
+a61da76
