@@ -66,7 +66,6 @@ void enlarge(HashMap *map) {
   map->capacity *= 2;
   
   map->buckets = calloc(map->capacity, sizeof(Pair));
-  auxBuckets = map->buckets;
   map->size = 0;
   
   for (int i = 0; i < map->capacity*2; i++){

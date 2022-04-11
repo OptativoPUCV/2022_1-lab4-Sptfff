@@ -408,3 +408,14 @@ Mon Apr 11 02:43:53 UTC 2022:
  1 file changed, 2 insertions(+), 2 deletions(-)
  tests:  0|0
 2b3b548
+Mon Apr 11 02:52:35 UTC 2022: 
+ hashmap.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:4:0:
+test.c: In function ‘enlarge’:
+hashmap.c:72:50: error: ‘auxBuckets’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+     insertMap(map, auxBuckets[i]->key, auxBuckets[i]->value);
+                                                  ^
+cc1: all warnings being treated as errors
+Compilation failed
+60c70c1
