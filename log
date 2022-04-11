@@ -284,3 +284,14 @@ Mon Apr 11 00:03:51 UTC 2022:
  tests:  16|1
 total_score: 60/70
 bc4c419
+Mon Apr 11 01:23:18 UTC 2022: 
+ hashmap.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+test.c: In function ‘enlarge’:
+hashmap.c:70:50: error: ‘auxBuckets’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+     insertMap(map, auxBuckets[i]->key, auxBuckets[i]->value);
+                                                  ^
+cc1: all warnings being treated as errors
+Compilation failed
+8719c71
