@@ -372,3 +372,14 @@ hashmap.c:71:50: error: ‘auxBuckets’ may be used uninitialized in this funct
 cc1: all warnings being treated as errors
 Compilation failed
 4d23eed
+Mon Apr 11 02:05:14 UTC 2022: 
+ hashmap.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+test.c: In function ‘enlarge’:
+hashmap.c:71:50: error: ‘auxBuckets’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+     insertMap(map, auxBuckets[i]->key, auxBuckets[i]->value);
+                                                  ^
+cc1: all warnings being treated as errors
+Compilation failed
+e3295c9
