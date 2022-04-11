@@ -125,7 +125,7 @@ Pair *nextMap(HashMap *map) {
   
   int aux;
 	for (aux = map->current; aux < map->capacity; aux++) {
-		if (map->buckets[aux] != NULL) {
+		if (map->buckets[aux] != NULL && aux != map->current) {
 			if (map->buckets[aux]->key != NULL) {
 				map->current = aux;
         return map->buckets[aux];
