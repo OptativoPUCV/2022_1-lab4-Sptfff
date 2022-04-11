@@ -62,9 +62,10 @@ void insertMap(HashMap *map, char *key, void *value) {
 void enlarge(HashMap *map) {
 	enlarge_called = 1; // no borrar (testing purposes)
   Pair **auxBuckets;
-
+  
   map->capacity *= 2;
 
+  map->buckets = calloc(2, map->capacity);
   map->size = 0;
   for (int i = 0; i < map->capacity; i++){
     insertMap(map, auxBuckets[i]->key, auxBuckets[i]->value);
