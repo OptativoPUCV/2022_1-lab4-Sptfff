@@ -72,7 +72,8 @@ void enlarge(HashMap *map) {
   
   for (int i = 0; i < map->capacity; i++){
     if(auxBuckets[i] != NULL){
-      insertMap(map, auxBuckets[i]->key, auxBuckets[i]->value);
+      if (auxBuckets[i]->key != NULL)
+        insertMap(map, auxBuckets[i]->key, auxBuckets[i]->value);
     }
     
   }
